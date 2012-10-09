@@ -3,60 +3,98 @@
   <head>
     <meta charset='utf-8'>
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <link href='https://fonts.googleapis.com/css?family=Architects+Daughter' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" type="text/css" href="stylesheets/stylesheet.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/pygment_trac.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="stylesheets/print.css" media="print" />
 
-    <title>NHML by sheiksadique</title>
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <title>NHML by inincs</title>
   </head>
 
   <body>
-
     <header>
-      <div class="container">
+      <div class="inner">
         <h1>NHML</h1>
         <h2>The Neuromorphic Hardware Markup Language</h2>
-
-        <section id="downloads">
-          <a href="https://github.com/sheiksadique/NHML/zipball/master" class="btn">Download as .zip</a>
-          <a href="https://github.com/sheiksadique/NHML/tarball/master" class="btn">Download as .tar.gz</a>
-          <a href="https://github.com/sheiksadique/NHML" class="btn btn-github"><span class="icon"></span>View on GitHub</a>
-        </section>
+        <a href="https://github.com/inincs/NHML" class="button"><small>View project on</small>GitHub</a>
       </div>
     </header>
 
-    <div class="container">
-      <section id="main_content">
-        <h3>Welcome to GitHub Pages.</h3>
+    <div id="content-wrapper">
+      <div class="inner clearfix">
+        <section id="main-content">
+          <h3>Welcome to NHML - 'The Neuromorphic Hardware Markup Language'.</h3>
 
-<p>This automatic page generator is the easiest way to create beautiful pages for all of your projects. Author your page content here using GitHub Flavored Markdown, select a template crafted by a designer, and publish. After your page is generated, you can check out the new branch:</p>
+<p>The "neuromorphic hardware description language" aims at generalizing a mapping workflow necessary to automatically generate valid hardware configurations given an abstract neural network description. A distant goal would be to establish some kind of neuromorphic operating system.</p>
 
-<pre><code>$ cd your_repo_root/repo_name
-$ git fetch origin
-$ git checkout gh-pages
-</code></pre>
+<p>Joining our efforts will hopefully lead to:</p>
 
-<p>If you're using the GitHub for Mac, simply sync your repository and you'll see the new branch.</p>
+<ul>
+<li><p>Save man power (at least in the long run)</p></li>
+<li><p>shorter from hardware testing to modelling times</p></li>
+<li><p>higher software quality</p></li>
+</ul><p>Since this is a major task we will first require to establish common ground. Even if you are not planning on contributing it would be great of you to join and explain to us your individual system, requirements and wishes.</p>
 
-<h3>Designer Templates</h3>
+<h3>Capoc Caccia Results</h3>
 
-<p>We've crafted some handsome templates for you to use. Go ahead and continue to layouts to browse through them. You can easily go back to edit your page before publishing. After publishing your page, you can revisit the page generator and switch to another theme. Your Page content will be preserved if it remained markdown format.</p>
+<p>Having a common way of describing neuromorphic systems is nice but rather useless, unless one can provide a tool chain atomizing certain parts of the workflow. We therefore discussed the following questions during the workshop:</p>
 
-<h3>Rather Drive Stick?</h3>
+<h3>What is meant to be the role of NHML ?</h3>
 
-<p>If you prefer to not use the automatic generator, push a branch named <code>gh-pages</code> to your repository to create a page manually. In addition to supporting regular HTML content, GitHub Pages support Jekyll, a simple, blog aware static site generator written by our own Tom Preston-Werner. Jekyll makes it easy to create site-wide headers and footers without having to copy them across every page. It also offers intelligent blog support and other advanced templating features.</p>
+<p>The main purpose should be process atomization rather than another barely readable documentation format. Even tough, it would be nice to have facilities for putting extra data in which in turn could be used to query databases for e.g. the best suitable system given a task or visualize the hardware systems specification in some gui to get a glimpse of what is there.</p>
 
-<h3>Authors and Contributors</h3>
+<h3>What kind of content should go into such a file ?</h3>
 
-<p>You can <a href="https://github.com/blog/821" class="user-mention">@mention</a> a GitHub username to generate a link to their profile. The resulting <code>&lt;a&gt;</code> element will link to the contributor's GitHub Profile. For example: In 2007, Chris Wanstrath (<a href="https://github.com/defunkt" class="user-mention">@defunkt</a>), PJ Hyett (<a href="https://github.com/pjhyett" class="user-mention">@pjhyett</a>), and Tom Preston-Werner (<a href="https://github.com/mojombo" class="user-mention">@mojombo</a>) founded GitHub.</p>
+<p>We agreed on XML as the basic file format, because there are countless tools out there and for basically any language.</p>
 
-<h3>Support or Contact</h3>
+<p>Representations of data have been a big concern. So, for instance things which should definitely included are:</p>
 
-<p>Having trouble with Pages? Check out the documentation at <a href="http://help.github.com/pages">http://help.github.com/pages</a> or contact <a href="mailto:support@github.com">support@github.com</a> and we’ll help you sort it out.</p>
-      </section>
+<ul>
+<li>Available Resources (including Constraints)</li>
+<li>Physical Topology (including Constraints)</li>
+<li>Parameters (including Constraints):
+
+<ul>
+<li>analog/digital parameters (constraints: precission, range)</li>
+<li>calibration data</li>
+<li>time</li>
+</ul>
+</li>
+</ul><h3>Which kinds of hardware should this file attempt to describe</h3>
+
+<p>Obviously neuromorphic chips, furthermore it could be very useful to also describe event based sensors like retinas in such a format. The data could then be used to represent such devices as spike sources in abstract neural network description languages (like e.g. pyNN).</p>
+
+<h3>Strategy for the Future</h3>
+
+<p>We decided to generate XML templates one from each lab to gain a perspective on which kinds of information each group expects to have in the nhml file.
+There should also be a brief description for each type of entry by the author to state his intentions about what this might be good for in an automated workflow.
+We will then take these files, find common denominators and merge them to cover the variety of neuromorphic hardware being used in our labs.</p>
+
+<p>Most importantly, we want to join forces and develop tools that can take advantage of NHML to access the hardware in terms of user front-end or tools easing configuration.</p>
+        </section>
+
+        <aside id="sidebar">
+          <a href="https://github.com/inincs/NHML/zipball/master" class="button">
+            <small>Download</small>
+            .zip file
+          </a>
+          <a href="https://github.com/inincs/NHML/tarball/master" class="button">
+            <small>Download</small>
+            .tar.gz file
+          </a>
+
+          <p class="repo-owner"><a href="https://github.com/inincs/NHML"></a> is maintained by <a href="https://github.com/inincs">inincs</a>.</p>
+
+          <p>This page was generated by <a href="pages.github.com">GitHub Pages</a> using the Architect theme by <a href="http://twitter.com/jasonlong">Jason Long</a>.</p>
+        </aside>
+      </div>
     </div>
 
-    
+  
   </body>
 </html>
