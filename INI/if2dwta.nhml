@@ -1,0 +1,164 @@
+<chip chipclass="IF2DWTA">
+  <addressSpecification type="aerIn">
+    <dim id="x" type="soma">
+      <range>range(64)</range>
+      <description/>
+      <decoder>X&gt;&gt;1</decoder>
+    </dim>
+    <dim id="y" type="soma">
+      <range>range(32)</range>
+      <description/>
+      <decoder>((Y-(Y%3))&lt;&lt;1)/3+(X&amp;1)</decoder>
+    </dim>
+    <dim id="s" type="synapse">
+      <range>[0, 1, 2]</range>
+      <description/>
+      <decoder>Y%3</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>2*x+(y&amp;1)</decoder>
+    </pin>
+    <pin id="Y">
+      <decoder>s+3*(y&gt;&gt;1)</decoder>
+    </pin>
+    <pinlayout>Y0 Y1 Y2 Y3 Y4 Y5 X6 X5 X4 X3 X2 X1 X0</pinlayout>
+  </addressSpecification>
+  <addressSpecification type="aerOut">
+    <dim id="x" type="soma">
+      <range>range(64)</range>
+      <description/>
+      <decoder>X</decoder>
+    </dim>
+    <dim id="y" type="soma">
+      <range>range(32)</range>
+      <description/>
+      <decoder>Y</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>x</decoder>
+    </pin>
+    <pin id="Y">
+      <decoder>y</decoder>
+    </pin>
+    <pinlayout>Y4 Y3 Y2 Y1 Y0 X5 X4 X3 X2 X1 X0</pinlayout>
+  </addressSpecification>
+  <parameters>
+    <parameter Count="41.0" SimulationValue="0.0" Description="" Pin="51.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="78.0" SignalName="nsynaerexcplswdt"/>
+    <parameter Count="39.0" SimulationValue="0.3" Description="" Pin="49.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAERINH" Channel="82.0" SignalName="nsynaerinhtau"/>
+    <parameter Count="26.0" SimulationValue="0.7" Description="" Pin="118.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Soma" Channel="21.0" SignalName="nsf"/>
+    <parameter Count="47.0" SimulationValue="0.5" Description="" Pin="40.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="43.0" SignalName="psynaerexcw1"/>
+    <parameter Count="43.0" SimulationValue="0.5" Description="" Pin="44.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="92.0" SignalName="psynaerexcw0"/>
+    <parameter Count="27.0" SimulationValue="3.3" Description="" Pin="39.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Soma" Channel="41.0" SignalName="inj"/>
+    <parameter Count="51.0" SimulationValue="0.0" Description="" Pin="54.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Power" Channel="49.0" SignalName="llGnd"/>
+    <parameter Count="21.0" SimulationValue="0.0" Description="" Pin="53.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="RING" Channel="74.0" SignalName="ringonoff"/>
+    <parameter Count="23.0" SimulationValue="0.0" Description="" Pin="1.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Soma" Channel="27.0" SignalName="nlk"/>
+    <parameter Count="45.0" SimulationValue="2.9" Description="" Pin="46.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="88.0" SignalName="psynaerexctau0"/>
+    <parameter Count="49.0" SimulationValue="2.9" Description="" Pin="42.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="47.0" SignalName="psynaerexctau1"/>
+    <parameter Count="22.0" SimulationValue="3.3" Description="" Pin="119.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Soma" Channel="23.0" SignalName="nadap"/>
+    <parameter Count="10.0" SimulationValue="0.0" Description="" Pin="69.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="62.0" SignalName="selx5"/>
+    <parameter Count="9.0" SimulationValue="0.0" Description="" Pin="68.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="64.0" SignalName="selx4"/>
+    <parameter Count="6.0" SimulationValue="0.0" Description="" Pin="65.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="70.0" SignalName="selx1"/>
+    <parameter Count="5.0" SimulationValue="0.0" Description="" Pin="64.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="72.0" SignalName="selx0"/>
+    <parameter Count="1.0" SimulationValue="0.8" Description="" Pin="80.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Arbiter" Channel="56.0" SignalName="Aepd"/>
+    <parameter Count="7.0" SimulationValue="0.0" Description="" Pin="66.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="68.0" SignalName="selx2"/>
+    <parameter Count="34.0" SimulationValue="0.0" Description="" Pin="116.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="17.0" SignalName="nsynloclat1"/>
+    <parameter Count="40.0" SimulationValue="3.3" Description="" Pin="50.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAERINH" Channel="80.0" SignalName="psynaerinhw"/>
+    <parameter Count="19.0" SimulationValue="0.0" Description="" Pin="36.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="MUX" Channel="37.0" SignalName="muxy0"/>
+    <parameter Count="20.0" SimulationValue="0.0" Description="" Pin="37.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="MUX" Channel="39.0" SignalName="muxy1"/>
+    <parameter Count="2.0" SimulationValue="2.8" Description="" Pin="79.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Arbiter" Channel="58.0" SignalName="req_puY"/>
+    <parameter Count="3.0" SimulationValue="2.8" Description="" Pin="78.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Arbiter" Channel="60.0" SignalName="req_puX"/>
+    <parameter Count="50.0" SimulationValue="0.4" Description="" Pin="86.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Power" Channel="54.0" SignalName="FollBias"/>
+    <parameter Count="29.0" SimulationValue="0.0" Description="" Pin="79.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="58.0" SignalName="nsynlocselfw"/>
+    <parameter Count="38.0" SimulationValue="0.0" Description="" Pin="48.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAERINH" Channel="84.0" SignalName="psynaerinhth"/>
+    <parameter Count="32.0" SimulationValue="3.3" Description="" Pin="109.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="3.0" SignalName="nsynlocth"/>
+    <parameter Count="31.0" SimulationValue="3.3" Description="" Pin="110.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="5.0" SignalName="psynlocselftau"/>
+    <parameter Count="44.0" SimulationValue="0.2" Description="" Pin="45.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="90.0" SignalName="nsynaerexcwd0"/>
+    <parameter Count="48.0" SimulationValue="0.2" Description="" Pin="41.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="45.0" SignalName="nsynaerexcwd1"/>
+    <parameter Count="46.0" SimulationValue="3.3" Description="" Pin="43.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="94.0" SignalName="nsynaerexcth1"/>
+    <parameter Count="42.0" SimulationValue="3.3" Description="" Pin="47.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAEREXC" Channel="86.0" SignalName="nsynaerexcth0"/>
+    <parameter Count="35.0" SimulationValue="0.0" Description="" Pin="114.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="13.0" SignalName="nsynlocvert1"/>
+    <parameter Count="17.0" SimulationValue="0.0" Description="" Pin="8.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="MUX" Channel="33.0" SignalName="muxx1"/>
+    <parameter Count="25.0" SimulationValue="0.4" Description="" Pin="117.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Soma" Channel="19.0" SignalName="nrf"/>
+    <parameter Count="30.0" SimulationValue="0.0" Description="" Pin="108.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="1.0" SignalName="nsynlocselfth"/>
+    <parameter Count="4.0" SimulationValue="2.8" Description="" Pin="2.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="29.0" SignalName="selpu"/>
+    <parameter Count="33.0" SimulationValue="3.3" Description="" Pin="111.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="7.0" SignalName="psynloctau"/>
+    <parameter Count="36.0" SimulationValue="0.0" Description="" Pin="113.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="11.0" SignalName="nsynlocvert2"/>
+    <parameter Count="14.0" SimulationValue="0.0" Description="" Pin="99.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="2.0" SignalName="sely3"/>
+    <parameter Count="18.0" SimulationValue="0.0" Description="" Pin="7.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="MUX" Channel="31.0" SignalName="muxx2"/>
+    <parameter Count="15.0" SimulationValue="0.0" Description="" Pin="100.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="0.0" SignalName="sely4"/>
+    <parameter Count="16.0" SimulationValue="0.0" Description="" Pin="9.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="MUX" Channel="35.0" SignalName="muxx0"/>
+    <parameter Count="13.0" SimulationValue="0.0" Description="" Pin="98.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="4.0" SignalName="sely2"/>
+    <parameter Count="8.0" SimulationValue="0.0" Description="" Pin="67.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="66.0" SignalName="selx3"/>
+    <parameter Count="11.0" SimulationValue="0.0" Description="" Pin="96.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="8.0" SignalName="sely0"/>
+    <parameter Count="12.0" SimulationValue="0.0" Description="" Pin="97.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Select" Channel="6.0" SignalName="sely1"/>
+    <parameter Count="28.0" SimulationValue="0.0" Description="" Pin="115.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNLOC" Channel="15.0" SignalName="nsynlocplswdt"/>
+    <parameter Count="37.0" SimulationValue="0.3" Description="" Pin="52.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="SYNAERINH" Channel="76.0" SignalName="nsynaerinhplswdt"/>
+    <parameter Count="24.0" SimulationValue="0.0" Description="" Pin="120.0" BiasType="dac" PADtype="" FET="" Range="" Pad="" CircuitBlock="Soma" Channel="25.0" SignalName="nlkadap"/>
+  </parameters>
+  <neuron id="excitatory_all">
+    <soma type="SOMA" id="general">
+      <dim id="y" range="range(32)"/>
+      <dim id="x" range="range(64)"/>
+      <parameter id="refractory" SignalName="nrf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="injection" SignalName="inj"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[2]"/>
+      <parameter id="threshold" SignalName="nsynaerexcth1"/>
+      <parameter id="tau" SignalName="psynaerexctau1"/>
+      <parameter id="weight" SignalName="psynaerexcw1"/>
+      <parameter id="pulse_width" SignalName="nsynaerexcplswdt"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[1]"/>
+      <parameter id="threshold" SignalName="nsynaerexcth0"/>
+      <parameter id="tau" SignalName="psynaerexctau0"/>
+      <parameter id="weight" SignalName="psynaerexcw0"/>
+      <parameter id="pulse_width" SignalName="nsynaerexcplswdt"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0]"/>
+      <parameter id="threshold" SignalName="psynaerinhth"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+      <parameter id="pulse_width" SignalName="nsynaerinhplswdt"/>
+    </synapse>
+  </neuron>
+  <neuron id="excitatory">
+    <soma type="SOMA" id="general">
+      <dim id="y" range="[4, 5, 8, 9, 12, 13, 16, 17, 20, 21, 24, 25, 28, 29]"/>
+      <dim id="x" range="range(64)"/>
+      <parameter id="refractory" SignalName="nrf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="injection" SignalName="inj"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[2]"/>
+      <parameter id="threshold" SignalName="nsynaerexcth1"/>
+      <parameter id="tau" SignalName="psynaerexctau1"/>
+      <parameter id="weight" SignalName="psynaerexcw1"/>
+      <parameter id="pulse_width" SignalName="nsynaerexcplswdt"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[1]"/>
+      <parameter id="threshold" SignalName="nsynaerexcth0"/>
+      <parameter id="tau" SignalName="psynaerexctau0"/>
+      <parameter id="weight" SignalName="psynaerexcw0"/>
+      <parameter id="pulse_width" SignalName="nsynaerexcplswdt"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0]"/>
+      <parameter id="threshold" SignalName="psynaerinhth"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+      <parameter id="pulse_width" SignalName="nsynaerinhplswdt"/>
+    </synapse>
+  </neuron>
+</chip>

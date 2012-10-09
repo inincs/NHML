@@ -1,0 +1,48 @@
+<chip chipclass="TMPDIFF64">
+  <addressSpecification type="aerOut">
+    <dim id="x" type="soma">
+      <range>range(64)</range>
+      <description/>
+      <decoder>X</decoder>
+    </dim>
+    <dim id="y" type="soma">
+      <range>range(64)</range>
+      <description/>
+      <decoder>Y&gt;&gt;1</decoder>
+    </dim>
+    <dim id="p" type="synapse">
+      <range>[0, 1]</range>
+      <description/>
+      <decoder>Y&amp;1</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>x</decoder>
+    </pin>
+    <pin id="Y">
+      <decoder>(y&lt;&lt;1)+p</decoder>
+    </pin>
+    <pinlayout>X4 X3 X2 X1 X0 X5 Y6 Y5 Y4 Y3 Y2 Y1 Y0</pinlayout>
+  </addressSpecification>
+  <parameters/>
+  <neuron id="pixelon">
+    <soma type="SOMA" id="general">
+      <dim id="y" range="range(64)"/>
+      <dim id="x" range="range(32)"/>
+      <dim id="p" range="[0]"/>
+    </soma>
+  </neuron>
+  <neuron id="pixel">
+    <soma type="SOMA" id="general">
+      <dim id="y" range="range(64)"/>
+      <dim id="x" range="range(32)"/>
+      <dim id="p" range="[0, 1]"/>
+    </soma>
+  </neuron>
+  <neuron id="pixeloff">
+    <soma type="SOMA" id="general">
+      <dim id="y" range="range(64)"/>
+      <dim id="x" range="range(32)"/>
+      <dim id="p" range="[1]"/>
+    </soma>
+  </neuron>
+</chip>

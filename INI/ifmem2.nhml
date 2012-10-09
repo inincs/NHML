@@ -1,0 +1,162 @@
+<chip chipclass="ifmem2">
+  <addressSpecification type="aerIn">
+    <dim id="x" type="soma">
+      <range>range(32)</range>
+      <description/>
+      <decoder>X</decoder>
+    </dim>
+    <dim id="w" type="synapse">
+      <range>range(32)</range>
+      <description/>
+      <decoder>Y</decoder>
+    </dim>
+    <dim id="s" type="synapse">
+      <range>range(8)</range>
+      <description/>
+      <decoder>Z</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>x</decoder>
+    </pin>
+    <pin id="Y">
+      <decoder>w</decoder>
+    </pin>
+    <pin id="Z">
+      <decoder>s</decoder>
+    </pin>
+    <pinlayout>Z2 Z1 Z0 Y4 Y3 Y2 Y1 Y0 X4 X3 X2 X1 X0</pinlayout>
+  </addressSpecification>
+  <addressSpecification type="aerOut">
+    <dim id="x" type="soma">
+      <range>range(32)</range>
+      <description/>
+      <decoder>(31-X)</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>(31-x)</decoder>
+    </pin>
+    <pinlayout>X4 X3 X2 X1 X0</pinlayout>
+  </addressSpecification>
+  <parameters>
+    <parameter Count="27.0" SimulationValue="" Description="Inh. Syn time constant with diffusion net" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="27.0" SignalName="gbSItauDiff"/>
+    <parameter Count="33.0" SimulationValue="" Description="weight4 Inh syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="31.0" SignalName="gbsynwinh4"/>
+    <parameter Count="12.0" SimulationValue="" Description="analog bias for weight2 of exc. Syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="11.0" SignalName="gbsynwex2"/>
+    <parameter Count="43.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="0.0" SignalName="bSIdv"/>
+    <parameter Count="74.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="37.0" SignalName="bsynwex4"/>
+    <parameter Count="57.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="18.0" SignalName="bNStau"/>
+    <parameter Count="70.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="33.0" SignalName="bSItauDiff"/>
+    <parameter Count="62.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="25.0" SignalName="bsynwex0"/>
+    <parameter Count="65.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="28.0" SignalName="bsynwex1"/>
+    <parameter Count="68.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="31.0" SignalName="bsynwex2"/>
+    <parameter Count="71.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="34.0" SignalName="bsynwex3"/>
+    <parameter Count="40.0" SimulationValue="" Description="" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="48.0" SignalName="b4"/>
+    <parameter Count="52.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="13.0" SignalName="bNSath"/>
+    <parameter Count="36.0" SimulationValue="" Description="" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="52.0" SignalName="b0"/>
+    <parameter Count="37.0" SimulationValue="" Description="" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="51.0" SignalName="b1"/>
+    <parameter Count="38.0" SimulationValue="" Description="" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="50.0" SignalName="b2"/>
+    <parameter Count="39.0" SimulationValue="" Description="" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="49.0" SignalName="b3"/>
+    <parameter Count="1.0" SimulationValue="" Description="soma???" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="0.0" SignalName="gbNSath"/>
+    <parameter Count="50.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="10.0" SignalName="bSEtau"/>
+    <parameter Count="29.0" SimulationValue="" Description="weight0 Inh syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="35.0" SignalName="gbsynwinh0"/>
+    <parameter Count="35.0" SimulationValue="" Description="AER pull-down bias" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="36.0" SignalName="gbAEpd"/>
+    <parameter Count="56.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="17.0" SignalName="bFolBias"/>
+    <parameter Count="22.0" SimulationValue="" Description="time constant of neuron DPI circuit " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="22.0" SignalName="gbNStau"/>
+    <parameter Count="9.0" SimulationValue="" Description="bias used in Acq. Amplifier " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="8.0" SignalName="scan"/>
+    <parameter Count="28.0" SimulationValue="" Description="Inh. Syn threshold voltage" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="28.0" SignalName="gbSIthr"/>
+    <parameter Count="23.0" SimulationValue="" Description="neuron DPI threshold vbias" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="23.0" SignalName="gbNSth"/>
+    <parameter Count="53.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="14.0" SignalName="bScanPBias"/>
+    <parameter Count="41.0" SimulationValue="" Description="" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="47.0" SignalName="currentconv"/>
+    <parameter Count="32.0" SimulationValue="" Description="weight3 Inh syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="32.0" SignalName="gbsynwinh3"/>
+    <parameter Count="14.0" SimulationValue="" Description="analog bias for weight4 of exc. Syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="14.0" SignalName="gbsynwex4"/>
+    <parameter Count="55.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="16.0" SignalName="bSItau"/>
+    <parameter Count="72.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="35.0" SignalName="bsynwinh4"/>
+    <parameter Count="69.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="32.0" SignalName="bsynwinh3"/>
+    <parameter Count="66.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="29.0" SignalName="bsynwinh2"/>
+    <parameter Count="63.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="26.0" SignalName="bsynwinh1"/>
+    <parameter Count="60.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="23.0" SignalName="bsynwinh0"/>
+    <parameter Count="58.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="20.0" SignalName="bAEpd"/>
+    <parameter Count="51.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="12.0" SignalName="bNSrefr"/>
+    <parameter Count="34.0" SimulationValue="" Description="" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="29.0" SignalName="folbias"/>
+    <parameter Count="13.0" SimulationValue="" Description="analog bias for weight3 of exc. Syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="12.0" SignalName="gbsynwex3"/>
+    <parameter Count="24.0" SimulationValue="" Description="Exc. Syn threshold vbias" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="24.0" SignalName="gbSEthr"/>
+    <parameter Count="25.0" SimulationValue="" Description="soma???" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="25.0" SignalName="gbNSatau"/>
+    <parameter Count="46.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="3.0" SignalName="bSEdv"/>
+    <parameter Count="18.0" SimulationValue="" Description="cascade bias in soma circuit " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="18.0" SignalName="gbNScas"/>
+    <parameter Count="20.0" SimulationValue="" Description="Neuron refractory " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="20.0" SignalName="gbNSrefr"/>
+    <parameter Count="47.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="4.0" SignalName="bNSaw"/>
+    <parameter Count="44.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="1.0" SignalName="bSEdh"/>
+    <parameter Count="42.0" SimulationValue="" Description="Write to memory bias" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="42.0" SignalName="wr"/>
+    <parameter Count="26.0" SimulationValue="" Description="Exc. Syn time constant with diffusion net" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="26.0" SignalName="gbSEtauDiff"/>
+    <parameter Count="5.0" SimulationValue="" Description="bias for syn diffusion network " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="4.0" SignalName="gbSEdh"/>
+    <parameter Count="31.0" SimulationValue="" Description="weight2 Inh syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="33.0" SignalName="gbsynwinh2"/>
+    <parameter Count="30.0" SimulationValue="" Description="weight1 Inh syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="34.0" SignalName="gbsynwinh1"/>
+    <parameter Count="45.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="2.0" SignalName="bSIdh"/>
+    <parameter Count="48.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="6.0" SignalName="bNScas"/>
+    <parameter Count="16.0" SimulationValue="" Description="bias for syn diffusion network " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="16.0" SignalName="gbSIdh"/>
+    <parameter Count="10.0" SimulationValue="" Description="analog bias for weight0 of exc. syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="9.0" SignalName="gbsynwex0"/>
+    <parameter Count="6.0" SimulationValue="" Description="bias for syn diffusion network " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="5.0" SignalName="gbSEdv"/>
+    <parameter Count="64.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="27.0" SignalName="bNSatau"/>
+    <parameter Count="61.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="24.0" SignalName="bSEthr"/>
+    <parameter Count="7.0" SimulationValue="" Description="time constant of inh. syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="6.0" SignalName="gbSItau"/>
+    <parameter Count="73.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="36.0" SignalName="bSIthr"/>
+    <parameter Count="54.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="15.0" SignalName="bNSreset"/>
+    <parameter Count="67.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="30.0" SignalName="bSEtauDiff"/>
+    <parameter Count="59.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="21.0" SignalName="bNSth"/>
+    <parameter Count="49.0" SimulationValue="" Description="" PIN="" BiasType="bg" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="9.0" SignalName="bNSin"/>
+    <parameter Count="2.0" SimulationValue="" Description="time constant of exc. syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="1.0" SignalName="gbSEtau"/>
+    <parameter Count="11.0" SimulationValue="" Description="analog bias for weight1 of exc. Syn" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="10.0" SignalName="gbsynwex1"/>
+    <parameter Count="17.0" SimulationValue="" Description="soma???" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="17.0" SignalName="gbNSaw"/>
+    <parameter Count="15.0" SimulationValue="" Description="bias for syn diffusion network " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="15.0" SignalName="gbSIdv"/>
+    <parameter Count="21.0" SimulationValue="" Description="reset bias in Some" PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="21.0" SignalName="gbNSreset"/>
+    <parameter Count="19.0" SimulationValue="" Description="Injection " PIN="" BiasType="dac" PadType="" FET="" Range="" PKG="" CircuitBlock="" Channel="19.0" SignalName="gbNSin"/>
+  </parameters>
+  <neuron id="excitatory">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="range(32)"/>
+      <parameter id="threshold" SignalName="gbNSth"/>
+      <parameter id="leak" SignalName="gbNStau"/>
+      <parameter id="injection" SignalName="gbNSin"/>
+      <parameter id="refractory" SignalName="gbNSrefr"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[1]"/>
+      <dim id="w" range="range(32)"/>
+      <parameter id="tau" SignalName="gbSEtau"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[0]"/>
+      <dim id="w" range="range(32)"/>
+      <parameter id="tau" SignalName="gbSEtau"/>
+      <parameter id="weight" SignalName="gbsynwex0"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory2">
+      <dim id="s" range="[2]"/>
+      <dim id="w" range="range(32)"/>
+      <parameter id="tau" SignalName="gbSEtau"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="exc1_all">
+      <dim id="s" range="[5]"/>
+      <dim id="w" range="[0]"/>
+      <parameter id="tau" SignalName="gbSEtau"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="exc2_all">
+      <dim id="s" range="[6]"/>
+      <dim id="w" range="[0]"/>
+      <parameter id="tau" SignalName="gbSEtau"/>
+    </synapse>
+    <synapse type="CONTROL SYNAPSE" id="acq">
+      <dim id="s" range="[7]"/>
+      <parameter id="tau" SignalName="gbSItau"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="exc0_all">
+      <dim id="s" range="[4]"/>
+      <dim id="w" range="[0]"/>
+      <parameter id="tau" SignalName="gbSEtau"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory0">
+      <dim id="s" range="[3]"/>
+      <dim id="w" range="range(32)"/>
+      <parameter id="tau" SignalName="gbSItau"/>
+    </synapse>
+  </neuron>
+</chip>

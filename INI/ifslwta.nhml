@@ -1,0 +1,345 @@
+<chip chipclass="IFSLWTA">
+  <addressSpecification type="aerIn">
+    <dim id="x" type="soma">
+      <range>range(128)</range>
+      <description/>
+      <decoder>X</decoder>
+    </dim>
+    <dim id="s" type="synapse">
+      <range>range(32)</range>
+      <description/>
+      <decoder>Y</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>x</decoder>
+    </pin>
+    <pin id="Y">
+      <decoder>s</decoder>
+    </pin>
+    <pinlayout>X0 X1 X2 X3 X4 X5 X6 Y4 Y3 Y2 Y1 Y0</pinlayout>
+  </addressSpecification>
+  <addressSpecification type="aerOut">
+    <dim id="x" type="soma">
+      <range>range(128)</range>
+      <description/>
+      <decoder>X</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>x</decoder>
+    </pin>
+    <pinlayout>X6 X5 X4 X3 X2 X1 X0</pinlayout>
+  </addressSpecification>
+  <parameters>
+    <parameter Count="109.0" SimulationValue="" Description="Low-leakage Vdd rail" PIN="94.0" BiasType="dac" PadType="INOR" FET="" Range="[3.0:3.3]" PKG="96.0" CircuitBlock="" Channel="49.0" SignalName="llVdd"/>
+    <parameter Count="59.0" SimulationValue="" Description="Stop learning DN current-conveyor bias" PIN="101.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="103.0" CircuitBlock="" Channel="56.0" SignalName="nbuf"/>
+    <parameter Count="107.0" SimulationValue="" Description="weight for bistable synapse" PIN="39.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="41.0" CircuitBlock="" Channel="6.0" SignalName="nLearnW"/>
+    <parameter Count="53.0" SimulationValue="" Description="Stop learning mem comparator threshold" PIN="95.0" BiasType="dac" PadType="IN" FET="p" Range="[0.2:0.8]" PKG="97.0" CircuitBlock="" Channel="50.0" SignalName="thmem"/>
+    <parameter Count="58.0" SimulationValue="" Description="Stop learning UP current-conveyor bias" PIN="110.0" BiasType="dac" PadType="IN" FET="p" SharedWith="ScanPBias" Range="[2.4:3.0]" PKG="112.0" CircuitBlock="CCONV" Channel="59.0" SignalName="pbuf"/>
+    <parameter Count="77.0" SimulationValue="" Description="AER plastic synapses NMDA threshold" PIN="66.0" BiasType="dac" PadType="IN" FET="p" Range="[0.2:0.5]" PKG="68.0" CircuitBlock="" Channel="23.0" SignalName="psynaernmda"/>
+    <parameter Count="42.0" SimulationValue="" Description="Spike emission threshold (of all neurons)" PIN="84.0" BiasType="dac" PadType="IN" FET="n" Range="[0.4:0.9]" PKG="86.0" CircuitBlock="" Channel="40.0" SignalName="nsf"/>
+    <parameter Count="55.0" SimulationValue="" Description="Stop learning enable threshold " PIN="98.0" BiasType="dac" PadType="IN" FET="p" Range="[2.4:3.3]" PKG="100.0" CircuitBlock="" Channel="53.0" SignalName="thk1"/>
+    <parameter Count="108.0" SimulationValue="" Description="Low-leakage Ground rail" PIN="53.0" BiasType="dac" PadType="BARE" FET="" Range="[0.0:0.2]" PKG="55.0" CircuitBlock="Power" Channel="12.0" SignalName="llGnd"/>
+    <parameter Count="48.0" SimulationValue="" Description="Stop learning Ca integrator threshold" PIN="108.0" BiasType="dac" PadType="IN" FET="n" Range="[2.4:3.0]" PKG="110.0" CircuitBlock="LPF" Channel="58.0" SignalName="nlpfth"/>
+    <parameter Count="56.0" SimulationValue="" Description="Stop learning disable LTD threshold" PIN="99.0" BiasType="dac" PadType="IN" FET="p" Range="[2.3:3.3]" PKG="101.0" CircuitBlock="" Channel="54.0" SignalName="thk2"/>
+    <parameter Count="91.0" SimulationValue="" Description="AER inhibitory synapses time constant" PIN="47.0" BiasType="dac" PadType="IN" FET="n" Range="[0.2:0.5]" PKG="49.0" CircuitBlock="" Channel="8.0" SignalName="nsynaerinhtau"/>
+    <parameter Count="45.0" SimulationValue="" Description="Inhibitory neuron injection current" PIN="88.0" BiasType="dac" PadType="IN" FET="p" Range="" PKG="90.0" CircuitBlock="" Channel="44.0" SignalName="pinj2"/>
+    <parameter Count="46.0" SimulationValue="" Description="Inhibitory neuron injection current" PIN="89.0" BiasType="dac" PadType="IN" FET="p" Range="" PKG="91.0" CircuitBlock="" Channel="45.0" SignalName="pinj3"/>
+    <parameter Count="39.0" SimulationValue="" Description="Leak current on all neurons" PIN="81.0" BiasType="dac" PadType="IN" FET="n" Range="[0:0.7]" PKG="83.0" CircuitBlock="" Channel="37.0" SignalName="nlk"/>
+    <parameter Count="44.0" SimulationValue="" Description="Inhibitory neuron injection current" PIN="87.0" BiasType="dac" PadType="IN" FET="p" Range="" PKG="89.0" CircuitBlock="" Channel="43.0" SignalName="pinj1"/>
+    <parameter Count="63.0" SimulationValue="" Description="Local inhibitory synapses time constant" PIN="75.0" BiasType="dac" PadType="IN" FET="n" Range="[0.2:0.5]" PKG="77.0" CircuitBlock="LOCINH" Channel="32.0" SignalName="nsynlocinhtau"/>
+    <parameter Count="68.0" SimulationValue="" Description="Local excitatory synapses threshold" PIN="76.0" BiasType="dac" PadType="IN" FET="n" Range="[2.4:3.0]" PKG="78.0" CircuitBlock="SYNLOC" Channel="33.0" SignalName="nsynlocth"/>
+    <parameter Count="46.0" SimulationValue="" Description="Inhibitory neuron injection current" PIN="90.0" BiasType="dac" PadType="IN" FET="p" Range="" PKG="92.0" CircuitBlock="" Channel="46.0" SignalName="pinj4"/>
+    <parameter Count="38.0" SimulationValue="" Description="Spike-frequency adaptation rate" PIN="83.0" BiasType="dac" PadType="IN" FET="n" Range="[2.2:3.3]" PKG="85.0" CircuitBlock="Soma" Channel="39.0" SignalName="nadap"/>
+    <parameter Count="43.0" SimulationValue="" Description="Excitatory neuron injection current" PIN="86.0" BiasType="dac" PadType="IN" FET="p" Range="" PKG="88.0" CircuitBlock="" Channel="42.0" SignalName="pinj"/>
+    <parameter Count="74.0" SimulationValue="" Description="AER plastic synapses pulse extender bias" PIN="69.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="71.0" CircuitBlock="SYNAERLEARN" Channel="26.0" SignalName="nsynaerpls"/>
+    <parameter Count="10.0" SimulationValue="" Description="AER Pull-down bias" PIN="12.0" BiasType="dac" PadType="IN" FET="n" Range="[0.4:1.2]" PKG="12.0" CircuitBlock="" Channel="1.0" SignalName="Aepd"/>
+    <parameter Count="86.0" SimulationValue="" Description="AER STD synapse 0 weight depression rate" PIN="56.0" BiasType="dac" PadType="IN" FET="n" Range="[0.0:0.4]" PKG="58.0" CircuitBlock="" Channel="13.0" SignalName="nsynstdwd0"/>
+    <parameter Count="29.0" SimulationValue="" Description="Scanner pull-down bias" PIN="1.0" BiasType="dac" PadType="IN" FET="n" Range="[0.3:0.9]" PKG="1.0" CircuitBlock="" Channel="0.0" SignalName="ScanPD"/>
+    <parameter Count="73.0" SimulationValue="" Description="Second and third nearest neighbor synapse weight" PIN="70.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.6]" PKG="72.0" CircuitBlock="" Channel="27.0" SignalName="nsynloclat2"/>
+    <parameter Count="94.0" SimulationValue="" Description="AER inhibitory synapses weight" PIN="48.0" BiasType="dac" PadType="IN" FET="p" Range="[2.4:3.3]" PKG="50.0" CircuitBlock="" Channel="9.0" SignalName="psynaerinhw"/>
+    <parameter Count="54.0" SimulationValue="" Description="Stop learning Ca comparator bias (jump-height)" PIN="97.0" BiasType="dac" PadType="IN" FET="n" Range="[0.2:0.6]" PKG="99.0" CircuitBlock="CMPI" Channel="52.0" SignalName="nwta"/>
+    <parameter Count="93.0" SimulationValue="" Description="AER inhibitory synapses pulse extender bias" PIN="50.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.6]" PKG="52.0" CircuitBlock="" Channel="11.0" SignalName="nsynaerinhpls"/>
+    <parameter Count="118.0" SimulationValue="" Description="Wide-pad follower bias" PIN="113.0" BiasType="dac" PadType="Corner FollBias" FET="" Range="[0.3:0.6]" PKG="115.0" CircuitBlock="" Channel="60.0" SignalName="FollBias"/>
+    <parameter Count="61.0" SimulationValue="" Description="Local inhibitory synapses pulse extender bias" PIN="79.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.6]" PKG="81.0" CircuitBlock="" Channel="36.0" SignalName="nplslocinh"/>
+    <parameter Count="88.0" SimulationValue="" Description="AER STD synapses time constant" PIN="60.0" BiasType="dac" PadType="IN" FET="p" Range="[2.7:3.3]" PKG="62.0" CircuitBlock="" Channel="17.0" SignalName="psynstdtau"/>
+    <parameter Count="36.0" SimulationValue="" Description="Synapse multiplexer select line" PIN="22.0" BiasType="dac" PadType="digiIN" FET="" Range="" PKG="22.0" CircuitBlock="" Channel="4.0" SignalName="mux2"/>
+    <parameter Count="34.0" SimulationValue="" Description="Synapse multiplexer select line" PIN="18.0" BiasType="dac" PadType="digiIN" FET="" Range="" PKG="18.0" CircuitBlock="MUX" Channel="2.0" SignalName="mux0"/>
+    <parameter Count="35.0" SimulationValue="" Description="Synapse multiplexer select line" PIN="20.0" BiasType="dac" PadType="digiIN" FET="" Range="" PKG="20.0" CircuitBlock="" Channel="3.0" SignalName="mux1"/>
+    <parameter Count="75.0" SimulationValue="" Description="AER plastic synapses threshold" PIN="68.0" BiasType="dac" PadType="IN" FET="n" Range="[2.4:3.0]" PKG="70.0" CircuitBlock="" Channel="25.0" SignalName="nsynaerth"/>
+    <parameter Count="60.0" SimulationValue="" Description="Local excitatory synapses pulse extender bias" PIN="78.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="80.0" CircuitBlock="LOCPLS(I)" Channel="35.0" SignalName="nplsloc"/>
+    <parameter Count="71.0" SimulationValue="" Description="Excitatory synapse to inhibitory neuron weight" PIN="72.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.6]" PKG="74.0" CircuitBlock="" Channel="29.0" SignalName="nsynexcinh"/>
+    <parameter Count="81.0" SimulationValue="" Description="Bistability comparator threshold" PIN="62.0" BiasType="dac" PadType="IN" FET="p" Range="[0.2:1.4]" PKG="64.0" CircuitBlock="" Channel="19.0" SignalName="synaerth"/>
+    <parameter Count="41.0" SimulationValue="" Description="Refractory period setting (of all neurons)" PIN="85.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="87.0" CircuitBlock="" Channel="41.0" SignalName="nrf"/>
+    <parameter Count="50.0" SimulationValue="" Description="Stop learning Ca integrator time constant" PIN="93.0" BiasType="dac" PadType="IN" FET="p" Range="[2.7:3.3]" PKG="95.0" CircuitBlock="" Channel="48.0" SignalName="plpftau"/>
+    <parameter Count="87.0" SimulationValue="" Description="AER STD synapse 1 weight depression rate" PIN="59.0" BiasType="dac" PadType="IN" FET="n" Range="[0.0:0.4]" PKG="61.0" CircuitBlock="" Channel="16.0" SignalName="nsynstdwd1"/>
+    <parameter Count="49.0" SimulationValue="" Description="Stop learning Ca integrator weight" PIN="92.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="94.0" CircuitBlock="" Channel="47.0" SignalName="nlpfw"/>
+    <parameter Count="78.0" SimulationValue="" Description="AER plastic synapses time constant" PIN="65.0" BiasType="dac" PadType="IN" FET="p" Range="[2.7:3.3]" PKG="67.0" CircuitBlock="" Channel="22.0" SignalName="psynaertau"/>
+    <parameter Count="79.0" SimulationValue="" Description="Bistability comparator top power supply rail" PIN="63.0" BiasType="dac" PadType="IN" FET="p" Range="[0.4:1.6]" PKG="65.0" CircuitBlock="" Channel="20.0" SignalName="synaerhi"/>
+    <parameter Count="85.0" SimulationValue="" Description="AER STD synapse 1 weight" PIN="58.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="60.0" CircuitBlock="" Channel="15.0" SignalName="nsynstdw1"/>
+    <parameter Count="84.0" SimulationValue="" Description="AER STD synapse 0 weight" PIN="57.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.7]" PKG="59.0" CircuitBlock="" Channel="14.0" SignalName="nsynstdw0"/>
+    <parameter Count="26.0" SimulationValue="" Description="Pull-up bias of AER synaptic circuits" PIN="31.0" BiasType="dac" PadType="IN" FET="p" Range="[2.7:2.9]" PKG="31.0" CircuitBlock="" Channel="5.0" SignalName="SynPU"/>
+    <parameter Count="80.0" SimulationValue="" Description="Bistability comparator bottom power supply rail" PIN="64.0" BiasType="dac" PadType="IN" FET="n" Range="[0.0:0.4]" PKG="66.0" CircuitBlock="" Channel="21.0" SignalName="synaerlo"/>
+    <parameter Count="66.0" SimulationValue="" Description="Local inhibitory synapses g-threshold" PIN="46.0" BiasType="dac" PadType="IN" FET="n" Range="[0.2:0.5]" PKG="48.0" CircuitBlock="" Channel="7.0" SignalName="nsynlocginh"/>
+    <parameter Count="69.0" SimulationValue="" Description="Local excitatory synapses time constant" PIN="73.0" BiasType="dac" PadType="IN" FET="p" Range="[2.7:3.3]" PKG="75.0" CircuitBlock="" Channel="30.0" SignalName="psynloctau"/>
+    <parameter Count="52.0" SimulationValue="" Description="Stop learning mem comparator bias" PIN="96.0" BiasType="dac" PadType="IN" FET="p" Range="[2.4:3.0]" PKG="98.0" CircuitBlock="CMPV" Channel="51.0" SignalName="pcmp"/>
+    <parameter Count="57.0" SimulationValue="" Description="Stop learning disable LTP threshold" PIN="100.0" BiasType="dac" PadType="IN" FET="p" Range="[2.2:3.3]" PKG="102.0" CircuitBlock="" Channel="55.0" SignalName="thk3"/>
+    <parameter Count="37.0" SimulationValue="" Description="Select array boundary conditions (closed/opened)" PIN="103.0" BiasType="dac" PadType="IN" FET="n" Range="" PKG="105.0" CircuitBlock="RING" Channel="57.0" SignalName="ring1"/>
+    <parameter Count="76.0" SimulationValue="" Description="Bistability comparator bias" PIN="67.0" BiasType="dac" PadType="IN" FET="p" Range="[2.4:3.3]" PKG="69.0" CircuitBlock="" Channel="24.0" SignalName="psynaerlk"/>
+    <parameter Count="70.0" SimulationValue="" Description="Self-excitatory synapse weight" PIN="77.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.6]" PKG="79.0" CircuitBlock="" Channel="34.0" SignalName="nsynlocself"/>
+    <parameter Count="72.0" SimulationValue="" Description="First nearest neighbor synapse weight" PIN="71.0" BiasType="dac" PadType="IN" FET="n" Range="[0.1:0.6]" PKG="73.0" CircuitBlock="" Channel="28.0" SignalName="nsynloclat1"/>
+    <parameter Count="40.0" SimulationValue="" Description="Spike-frequency adaptation recovery rate" PIN="82.0" BiasType="dac" PadType="IN" FET="n" Range="[0:0.7]" PKG="84.0" CircuitBlock="" Channel="38.0" SignalName="nlkadap"/>
+    <parameter Count="65.0" SimulationValue="" Description="Local inhibitory synapses threshold" PIN="49.0" BiasType="dac" PadType="IN" FET="p" Range="[2.4:3.0]" PKG="51.0" CircuitBlock="" Channel="10.0" SignalName="psynlocinhth"/>
+    <parameter Count="64.0" SimulationValue="" Description="Local inhibitory synapses weight" PIN="74.0" BiasType="dac" PadType="IN" FET="p" Range="[2.4:3.3]" PKG="76.0" CircuitBlock="" Channel="31.0" SignalName="psynlocinhw"/>
+    <parameter Count="83.0" SimulationValue="" Description="AER STD synapses threshold" PIN="61.0" BiasType="dac" PadType="IN" FET="n" Range="[2.4:3.0]" PKG="63.0" CircuitBlock="SYNAERSTD" Channel="18.0" SignalName="nsynstdth"/>
+  </parameters>
+  <neuron id="inhibitory">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="[124, 125, 126, 127]"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="refractory" SignalName="nrf"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[3]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd1"/>
+      <parameter id="weight" SignalName="nsynstdw1"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[2]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd0"/>
+      <parameter id="weight" SignalName="nsynstdw0"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0, 1]"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+    </synapse>
+    <synapse type="EXCITATORY_LEARN SYNAPSE" id="learning">
+      <dim id="s" range="range(4,32)"/>
+      <parameter id="weight_leak" SignalName="plpftau"/>
+      <parameter id="tau" SignalName="psynaertau"/>
+      <parameter id="weight_th" SignalName="synaerth"/>
+      <parameter id="weight_low" SignalName="synaerlo"/>
+      <parameter id="weight_hi" SignalName="synaerhi"/>
+    </synapse>
+  </neuron>
+  <neuron id="excitatory_all">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="range(128)"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="refractory" SignalName="nrf"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[3]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd1"/>
+      <parameter id="weight" SignalName="nsynstdw1"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[2]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd0"/>
+      <parameter id="weight" SignalName="nsynstdw0"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0, 1]"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+    </synapse>
+    <synapse type="EXCITATORY_LEARN SYNAPSE" id="learning">
+      <dim id="s" range="range(4,32)"/>
+      <parameter id="weight_leak" SignalName="plpftau"/>
+      <parameter id="tau" SignalName="psynaertau"/>
+      <parameter id="weight_th" SignalName="synaerth"/>
+      <parameter id="weight_low" SignalName="synaerlo"/>
+      <parameter id="weight_hi" SignalName="synaerhi"/>
+    </synapse>
+  </neuron>
+  <neuron id="inhibitory4">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="[127]"/>
+      <parameter id="refractory" SignalName="nrf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="injection" SignalName="pinj4"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[3]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd1"/>
+      <parameter id="weight" SignalName="nsynstdw1"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[2]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd0"/>
+      <parameter id="weight" SignalName="nsynstdw0"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0, 1]"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+    </synapse>
+    <synapse type="EXCITATORY_LEARN SYNAPSE" id="learning">
+      <dim id="s" range="range(4,32)"/>
+      <parameter id="weight_leak" SignalName="plpftau"/>
+      <parameter id="tau" SignalName="psynaertau"/>
+      <parameter id="weight_th" SignalName="synaerth"/>
+      <parameter id="weight_low" SignalName="synaerlo"/>
+      <parameter id="weight_hi" SignalName="synaerhi"/>
+    </synapse>
+  </neuron>
+  <neuron id="inhibitory2">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="[125]"/>
+      <parameter id="refractory" SignalName="nrf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="injection" SignalName="pinj2"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[3]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd1"/>
+      <parameter id="weight" SignalName="nsynstdw1"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[2]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd0"/>
+      <parameter id="weight" SignalName="nsynstdw0"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0, 1]"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+    </synapse>
+    <synapse type="EXCITATORY_LEARN SYNAPSE" id="learning">
+      <dim id="s" range="range(4,32)"/>
+      <parameter id="weight_leak" SignalName="plpftau"/>
+      <parameter id="tau" SignalName="psynaertau"/>
+      <parameter id="weight_th" SignalName="synaerth"/>
+      <parameter id="weight_low" SignalName="synaerlo"/>
+      <parameter id="weight_hi" SignalName="synaerhi"/>
+    </synapse>
+  </neuron>
+  <neuron id="inhibitory3">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="[126]"/>
+      <parameter id="refractory" SignalName="nrf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="injection" SignalName="pinj3"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[3]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd1"/>
+      <parameter id="weight" SignalName="nsynstdw1"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[2]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd0"/>
+      <parameter id="weight" SignalName="nsynstdw0"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0, 1]"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+    </synapse>
+    <synapse type="EXCITATORY_LEARN SYNAPSE" id="learning">
+      <dim id="s" range="range(4,32)"/>
+      <parameter id="weight_leak" SignalName="plpftau"/>
+      <parameter id="tau" SignalName="psynaertau"/>
+      <parameter id="weight_th" SignalName="synaerth"/>
+      <parameter id="weight_low" SignalName="synaerlo"/>
+      <parameter id="weight_hi" SignalName="synaerhi"/>
+    </synapse>
+  </neuron>
+  <neuron id="inhibitory1">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="[124]"/>
+      <parameter id="refractory" SignalName="nrf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="injection" SignalName="pinj1"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[3]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd1"/>
+      <parameter id="weight" SignalName="nsynstdw1"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[2]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd0"/>
+      <parameter id="weight" SignalName="nsynstdw0"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0, 1]"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+    </synapse>
+    <synapse type="EXCITATORY_LEARN SYNAPSE" id="learning">
+      <dim id="s" range="range(4,32)"/>
+      <parameter id="weight_leak" SignalName="plpftau"/>
+      <parameter id="tau" SignalName="psynaertau"/>
+      <parameter id="weight_th" SignalName="synaerth"/>
+      <parameter id="weight_low" SignalName="synaerlo"/>
+      <parameter id="weight_hi" SignalName="synaerhi"/>
+    </synapse>
+  </neuron>
+  <neuron id="excitatory">
+    <soma type="SOMA" id="general">
+      <dim id="x" range="range(124)"/>
+      <parameter id="refractory" SignalName="nrf"/>
+      <parameter id="leak" SignalName="nlk"/>
+      <parameter id="adaptation_recovery" SignalName="nlkadap"/>
+      <parameter id="adaptation" SignalName="nadap"/>
+      <parameter id="threshold" SignalName="nsf"/>
+      <parameter id="injection" SignalName="pinj"/>
+    </soma>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory1">
+      <dim id="s" range="[3]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd1"/>
+      <parameter id="weight" SignalName="nsynstdw1"/>
+    </synapse>
+    <synapse type="EXCITATORY SYNAPSE" id="excitatory0">
+      <dim id="s" range="[2]"/>
+      <parameter id="tau" SignalName="psynstdtau"/>
+      <parameter id="depression" SignalName="nsynstdwd0"/>
+      <parameter id="weight" SignalName="nsynstdw0"/>
+    </synapse>
+    <synapse type="INHIBITORY SYNAPSE" id="inhibitory">
+      <dim id="s" range="[0, 1]"/>
+      <parameter id="tau" SignalName="nsynaerinhtau"/>
+      <parameter id="weight" SignalName="psynaerinhw"/>
+    </synapse>
+    <synapse type="EXCITATORY_LEARN SYNAPSE" id="learning">
+      <dim id="s" range="range(4,32)"/>
+      <parameter id="weight_leak" SignalName="plpftau"/>
+      <parameter id="tau" SignalName="psynaertau"/>
+      <parameter id="weight_th" SignalName="synaerth"/>
+      <parameter id="weight_low" SignalName="synaerlo"/>
+      <parameter id="weight_hi" SignalName="synaerhi"/>
+    </synapse>
+  </neuron>
+</chip>

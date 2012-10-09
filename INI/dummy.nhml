@@ -1,0 +1,47 @@
+<chip chipclass="DUMMY">
+  <addressSpecification type="aerIn">
+    <dim id="x" type="soma">
+      <range>range(128)</range>
+      <description/>
+      <decoder>X</decoder>
+    </dim>
+    <dim id="y" type="soma">
+      <range>range(32)</range>
+      <description/>
+      <decoder>Y</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>x</decoder>
+    </pin>
+    <pin id="Y">
+      <decoder>y</decoder>
+    </pin>
+    <pinlayout>X6 X5 X4 X3 X2 X1 X0 Y4 Y3 Y2 Y1 Y0</pinlayout>
+  </addressSpecification>
+  <addressSpecification type="aerOut">
+    <dim id="x" type="soma">
+      <range>range(128)</range>
+      <description/>
+      <decoder>X</decoder>
+    </dim>
+    <dim id="y" type="soma">
+      <range>range(32)</range>
+      <description/>
+      <decoder>Y</decoder>
+    </dim>
+    <pin id="X">
+      <decoder>x</decoder>
+    </pin>
+    <pin id="Y">
+      <decoder>y</decoder>
+    </pin>
+    <pinlayout>X6 X5 X4 X3 X2 X1 X0 Y4 Y3 Y2 Y1 Y0</pinlayout>
+  </addressSpecification>
+  <parameters/>
+  <neuron id="excitatory">
+    <soma type="SOMA" id="general">
+      <dim id="y" range="range(32)"/>
+      <dim id="x" range="range(128)"/>
+    </soma>
+  </neuron>
+</chip>
