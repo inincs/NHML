@@ -3,45 +3,45 @@
     <dim id="x" type="soma">
       <range>range(64)</range>
       <description/>
-      <decoder>X</decoder>
+      <decoder>X&gt;&gt;1</decoder>
     </dim>
     <dim id="y" type="soma">
       <range>range(64)</range>
       <description/>
-      <decoder>Y&gt;&gt;1</decoder>
+      <decoder>Y</decoder>
     </dim>
     <dim id="p" type="synapse">
       <range>[0, 1]</range>
       <description/>
-      <decoder>Y&amp;1</decoder>
+      <decoder>X&amp;1</decoder>
     </dim>
     <pin id="X">
-      <decoder>x</decoder>
+      <decoder>(x&lt;&lt;1)+p</decoder>
     </pin>
     <pin id="Y">
-      <decoder>(y&lt;&lt;1)+p</decoder>
+      <decoder>y</decoder>
     </pin>
-    <pinlayout>X4 X3 X2 X1 X0 X5 Y6 Y5 Y4 Y3 Y2 Y1 Y0</pinlayout>
+    <pinlayout>Y0 Y1 Y2 Y3 Y4 Y5 X9 X8 X0 X7 X6 X5 X4 X3 X2 X1</pinlayout>
   </addressSpecification>
   <parameters/>
   <neuron id="pixelon">
     <soma type="SOMA" id="general">
-      <dim id="y" range="range(64)"/>
-      <dim id="x" range="range(32)"/>
+      <dim id="y" range="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]"/>
+      <dim id="x" range="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]"/>
       <dim id="p" range="[0]"/>
     </soma>
   </neuron>
   <neuron id="pixel">
     <soma type="SOMA" id="general">
-      <dim id="y" range="range(64)"/>
-      <dim id="x" range="range(32)"/>
+      <dim id="y" range="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]"/>
+      <dim id="x" range="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]"/>
       <dim id="p" range="[0, 1]"/>
     </soma>
   </neuron>
   <neuron id="pixeloff">
     <soma type="SOMA" id="general">
-      <dim id="y" range="range(64)"/>
-      <dim id="x" range="range(32)"/>
+      <dim id="y" range="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31, 32, 33, 34, 35, 36, 37, 38, 39, 40, 41, 42, 43, 44, 45, 46, 47, 48, 49, 50, 51, 52, 53, 54, 55, 56, 57, 58, 59, 60, 61, 62, 63]"/>
+      <dim id="x" range="[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27, 28, 29, 30, 31]"/>
       <dim id="p" range="[1]"/>
     </soma>
   </neuron>
