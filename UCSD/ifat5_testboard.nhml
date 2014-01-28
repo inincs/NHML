@@ -50,6 +50,12 @@
     <pin id="Y">
       <decoder>s</decoder>
     </pin>
+    <pin id="W">
+      <decoder>w</decoder>
+    </pin>
+    <pin id="H">
+      <decoder>h</decoder>
+    </pin>
     <pinlayout>P1 P0 A0 A2 A1 X5 X4 X3 X2 X1 X0 Y4 Y3 Y2 Y1 Y0 S1 S0 W3 W2 W1 W0 H3 H2 H1 H0</pinlayout>
   </addressSpecification>
   <addressSpecification type="aerOut">
